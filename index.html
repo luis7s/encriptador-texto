@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="img__header" src="./assets/logo.png" alt="logo">
+    </header>
+
+    <main class="presentacion">
+        <div class="parte__izquierda">
+            <textarea class="text__input" id="textIncriptar" rows="6" cols="40" placeholder="Ingrese el texto aqui"></textarea>
+
+            <div class="advertencia">
+                <img src="./assets/imagen-exclamacion.png" alt="img-exclamacion">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="css-botones">
+                <button class="boton__primario" onclick="encriptar()">Encriptar</button>
+                <button class="boton__secundario" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+
+        <section class="parte__derecha">
+            <div id="resultadoContainer" class="placeholder__mensaje">
+                <img id="resultadoImagen" src="./assets/muñeco.png" alt="muñeco">
+                <p id="mensajePlaceholder">Ningún mensaje fue encontrado<br>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea class="text__output" id="textResultado" rows="4" cols="20" readonly></textarea>
+
+            <button class="boton__primario" onclick="copiarTexto()">Copiar</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Desarrollado por Luis Moreno</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
